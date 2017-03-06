@@ -1,0 +1,20 @@
+[
+  {
+    "Id": "7",
+    "Name": "children's t-shirt",
+    "Price": "10",
+    "ImageData": "app/resources/product.png"
+  },
+  {
+    "Id": "8",
+    "Name": "children's back-pack",
+    "Price": "20",
+    "ImageData": "app/resources/product.png"
+  },
+  {
+    "Id": "9",
+    "Name": "children's pants",
+    "Price": "30",
+    "ImageData": "app/resources/product.png"
+  }
+]

@@ -1,0 +1,166 @@
+
+.catalog {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.catalog-filter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 90px;
+    background: #f5f6f7;
+
+    .catalog-filters {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        .catalog-filter-item {
+            display: flex;
+            flex-direction: row;
+            margin-right: 30px;
+
+            .catalog-filter-checkbox {
+                width: 25px;
+                height: 24px;
+                margin-right: 15px;
+                background: url("../assets/images/checkbox.png") no-repeat;
+                background-size: cover;
+
+                &.checked {
+                    background: url("../assets/images/checkbox-checked.png") no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            .catalog-filter-label {
+                line-height: 30px;
+                text-transform: uppercase;
+                cursor: default;
+            }
+        }
+    }
+
+    .catalog-filter-button {
+        width: 180px;
+        padding: 10px;
+        border: none;
+        line-height: 30px;
+        background: #aa9b77;
+        color: white;
+        text-transform: uppercase;
+    }
+}
+
+.catalog-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 50px 20px;
+
+    .catalog-item {
+        padding: 20px 40px;
+        margin: 30px;
+        background: #f5f6f7;
+        text-transform: uppercase;
+
+        &.selected {
+            outline: 6px solid #aa9b77;
+        }
+
+        .catalog-item-size {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            height: 30px;
+
+            .catalog-item-size-title {
+                margin-right: 5px;
+                line-height: 30px;
+                color: #424242;
+            }
+            .catalog-item-size-picker {
+                width: 12px;
+                height: 8px;
+                background: url("../assets/images/angle-down.png") no-repeat;
+                background-size: cover;
+            }
+        }
+        .catalog-item-image {
+            width: 240px;
+            height: 280px;
+        }
+
+        .catalog-item-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            line-height: 30px;
+
+            .catalog-item-name {
+                margin-right: 10px;
+                color: #aa9b77;
+            }
+
+            .catalog-item-price {
+                color: #424242;
+            }
+        }
+    }
+}
+
+@media only all and (max-width: 800px) {
+
+    .catalog-filter {
+        flex-direction: column;
+
+        .catalog-filters {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            margin-bottom: 30px;
+
+            .catalog-filter-item {
+                margin: 0 0 10px 0;
+            }
+        }
+    }
+
+    .catalog-list {
+        .catalog-item {
+            margin: 20px;
+        }
+    }
+}
+
+@media only all and (max-width: 760px) {
+
+    .catalog-filter {
+
+        .catalog-filters {
+            flex-direction: column;
+            align-items: flex-start;
+
+        }
+    }
+
+    .catalog-list {
+        justify-content: space-around;
+    }
+}
+
+@media only all and (max-width: 380px) {
+
+    .catalog-list {
+        .catalog-item {
+            padding: 20px;
+        }
+    }
+}
+

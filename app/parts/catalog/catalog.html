@@ -1,0 +1,37 @@
+<div class="catalog">
+    <div class="catalog-filter">
+        <div class="catalog-filters">
+            <div class="catalog-filter-item" ng-click="vm.filtersClickHandler($event, 'men')">
+                <div class="catalog-filter-checkbox" data-product-type="men"></div>
+                <div class="catalog-filter-label">Men</div>
+            </div>
+            <div class="catalog-filter-item" ng-click="vm.filtersClickHandler($event, 'women')">
+                <div class="catalog-filter-checkbox" data-product-type="women"></div>
+                <div class="catalog-filter-label">Women</div>
+            </div>
+            <div class="catalog-filter-item" ng-click="vm.filtersClickHandler($event,'children')">
+                <div class="catalog-filter-checkbox" data-product-type="children"></div>
+                <div class="catalog-filter-label">Children</div>
+            </div>
+        </div>
+        <button class="catalog-filter-button" ng-click="vm.filterButtonClickHandler()">See all products</button>
+    </div>
+
+    <div class="catalog-list">
+        <div class="catalog-item" ng-repeat="product in vm.products">
+            <div class="catalog-item-size">
+                <div class="catalog-item-size-title">
+                    Size
+                </div>
+                <div class="catalog-item-size-picker"></div>
+            </div>
+            <img class="catalog-item-image" ng-src="{{product.ImageData}}">
+            <div class="catalog-item-content">
+                <div class="catalog-item-name">{{product.Name}}</div>
+                <div class="catalog-item-price">{{ product.Price | currency : "" : 2 }}€</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

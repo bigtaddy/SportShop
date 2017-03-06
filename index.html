@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html ng-app="shopApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Shop</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet/less" type="text/css" href="styles/app.less">
+    <script src="libs/less/dist/less.js"></script>
+</head>
+<body>
+
+<div class="header">
+    <a class="header-logo" href="#/"></a>
+
+    <div class="nav-menu">
+        <a class="nav-menu-item" href="#/">Home</a>
+        <a class="nav-menu-item" href="#/">Products</a>
+        <a class="nav-menu-item nav-menu-item-cart" href="#/"></a>
+    </div>
+</div>
+<div class="main">
+    <div class="main-banner">
+        <div class="main-banner-info">
+            <div class="main-banner-header">
+                Our clothing , your comfort
+            </div>
+            <div class="main-banner-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et doloremagna aliqua.
+            </div>
+        </div>
+        <div banner-scroll class="main-banner-scroll-arrow"></div>
+    </div>
+
+    <div class="content" ng-view="">
+
+    </div>
+
+</div>
+
+<div class="footer">
+    <div class="footer-social">
+        <div class="footer-social-icon"></div>
+        <div class="footer-social-description">“ E-commerce psd theme available ”</div>
+    </div>
+    <div class="footer-main">
+        <div class="footer-info">
+            <div class="footer-info-header">
+                Trekking
+            </div>
+            <div class="footer-info-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+            </div>
+        </div>
+
+        <div class="footer-additional-info">
+            <div class="footer-menu">
+                <a class="footer-menu-item" href="#/">Credits</a>
+                <a class="footer-menu-item" href="#/">Privacy</a>
+                <a class="footer-menu-item" href="#/">About</a>
+                <a class="footer-menu-item" href="#/">Contact</a>
+            </div>
+
+            <div class="footer-design-author">Design by gianluca cosetta</div>
+        </div>
+
+    </div>
+</div>
+
+<script src="libs/angular/angular.js"></script>
+<script src="libs/angular-route/angular-route.js"></script>
+<script src="app/app.js"></script>
+<script src="app/utils/HtmlExtensions.js"></script>
+<script src="app/utils/Product.js"></script>
+<script src="app/data/CatalogFactory.js"></script>
+<script src="app/parts/catalog/CatalogController.js"></script>
+<script src="app/parts/catalog/BannerScroll.js"></script>
+
+</body>
+
+</html>
